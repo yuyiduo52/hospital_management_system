@@ -4,45 +4,17 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 public class Appointment implements Serializable {
-    private String userName;
-    private char sex;
-    private int age;
-    private String tel;
-    private String desc;
-    private String departName;
+    private Person person;//person is the person make appointment
+    private String desc;//description
     private String doctorId;
     private LocalDateTime appointDateTime;
 
-    public String getUserName() {
-        return userName;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public char getSex() {
-        return sex;
-    }
-
-    public void setSex(char sex) {
-        this.sex = sex;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getTel() {
-        return tel;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public String getDesc() {
@@ -51,14 +23,6 @@ public class Appointment implements Serializable {
 
     public void setDesc(String desc) {
         this.desc = desc;
-    }
-
-    public String getDepartName() {
-        return departName;
-    }
-
-    public void setDepartName(String departName) {
-        this.departName = departName;
     }
 
     public String getDoctorId() {
