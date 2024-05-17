@@ -8,17 +8,18 @@ import java.io.File;
  * This class is used to manage the input and output of the system
  *@author Yiduo Yu
  *@version 1.0
- *@since 2021-4-10
+ *@since 2021-5-17
  *
  */
 public class IOManager {
-    private final static File HOME_DIRECTORY = FileSystemView.getFileSystemView().getHomeDirectory();
+    //ALERT: IN THIS PROGRAM, HOME_DIRECTORY IS THE DESKTOP
+    private final static File HOME_DIRECTORY = new File(System.getProperty("user.home"), "Desktop");
     private final static File WORKING_DIRECTORY = new File(System.getProperty("user.dir"));
     private File currentDirectory = WORKING_DIRECTORY;
 
 
-
     public static void main(String[] args) {
+ 
         System.out.println(HOME_DIRECTORY);
         System.out.println(WORKING_DIRECTORY);
         IOManager file = new IOManager();
