@@ -3,6 +3,13 @@ package edu.wku.hospital.management.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+
+/**
+ * Appointment
+ * @author Yiduo Yu
+ * @version 1.0
+ * @date May 17, 2024
+ */
 public class Appointment implements Serializable {
     private Person person;//person is the person make appointment
     private String desc;//description

@@ -1,6 +1,5 @@
 package edu.wku.hospital.management.service;
 import javax.swing.*;
-import javax.swing.filechooser.FileSystemView;
 import java.io.File;
 
 
@@ -8,7 +7,7 @@ import java.io.File;
  * This class is used to manage the input and output of the system
  *@author Yiduo Yu
  *@version 1.0
- *@since 2021-5-17
+ *@since 5-17-2024
  *
  */
 public class IOManager {
@@ -18,14 +17,6 @@ public class IOManager {
     private File currentDirectory = WORKING_DIRECTORY;
 
 
-    public static void main(String[] args) {
- 
-        System.out.println(HOME_DIRECTORY);
-        System.out.println(WORKING_DIRECTORY);
-        IOManager file = new IOManager();
-        file.changeDirectory();
-        System.out.println(file.currentDirectory);
-    }
     /**
      * This method is used to choose a file from the file system
      * @return the file that the user selected
