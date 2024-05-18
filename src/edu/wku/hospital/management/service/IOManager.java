@@ -1,6 +1,16 @@
 package edu.wku.hospital.management.service;
 import javax.swing.*;
+
+import edu.wku.hospital.management.exception.NotFoundException;
+import edu.wku.hospital.management.frame.StateMachine;
+
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 
 /**
@@ -48,7 +58,6 @@ public class IOManager {
         } else {
            return;
         }
-       
     }
 
     /**
@@ -78,4 +87,46 @@ public class IOManager {
           return searchGivenInfo(message,2);
 
     }
+
+    public static void saveSerializable (Serializable o, String path){
+        File file = new File(path);
+        if (!file.exists()) {
+            file.getParentFile().mkdirs();
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+                return;
+            }
+        }
+
+        try (FileOutputStream fileOut = new FileOutputStream(file);
+             ObjectOutputStream out = new ObjectOutputStream(fileOut)) {
+            out.writeObject(o);
+        } catch (IOException i) {
+            i.printStackTrace();
+        }
+       
+   }
+    
+    public static Serializable loadSerializable (String resource, String file) throws NotFoundException{
+        File lfile = new File(file);
+        Serializable o;
+        if (!lfile.exists()) {
+            throw new NotFoundException(resource, file);
+        }
+        try (FileInputStream fileIn = new FileInputStream(file);
+        ObjectInputStream in = new ObjectInputStream(fileIn)) {
+        o = (Serializable) in.readObject();
+        return o;
+        } 
+            catch (IOException i) {
+            i.printStackTrace();
+            return null;
+            } 
+            catch (ClassNotFoundException c) {
+                c.printStackTrace();
+                return null;
+            }
+        }
 }

@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import edu.wku.hospital.management.service.Command;
 import edu.wku.hospital.management.service.Commands;
 
 /**
@@ -34,6 +35,7 @@ public class StateMachine implements Serializable {
         BILLING, 
         CASE_RECORDING,
         QUIT, 
+        EXPIRED
     }   
 
     public StateMachine(State initialState) {
@@ -47,6 +49,7 @@ public class StateMachine implements Serializable {
         commands.put(State.BILLING, new Commands.Bill());
         commands.put(State.CASE_RECORDING, new Commands.Record());
         commands.put(State.QUIT, new Commands.Quit());
+        commands.put(State.EXPIRED, new Commands.Expire());
     }
 
     public void manageState(Command command, Serializable data){
@@ -81,8 +84,11 @@ public class StateMachine implements Serializable {
             stateHistory.add(State.PATIENT_REGISTRATION);
             addData(State.PATIENT_REGISTRATION,data);
         }
-        save();
-        
+        else if (command instanceof Commands.Expire){
+            stateHistory.clear();
+            stateHistory.add(State.INITIAL);
+        }
+        save();       
     }
 
 
@@ -117,6 +123,9 @@ public class StateMachine implements Serializable {
             case "q":
                 state = State.QUIT.name();
                 break;
+            case "expire":
+            case "logout":
+                state = State.EXPIRED.name();
             default:
                 state = State.INITIAL.name();
                 break;
@@ -139,6 +148,7 @@ public class StateMachine implements Serializable {
     }
 
     /**
+     * 
      * This method is used to save the state of the system
      * @return the state of the system
      */

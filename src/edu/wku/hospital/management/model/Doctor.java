@@ -45,7 +45,6 @@ public class Doctor extends Person implements Serializable {
     }
 
 
-
     private String hashPassword(String password) throws NoSuchAlgorithmException {
             MessageDigest md = MessageDigest.getInstance("SHA-256");
             byte[] hash = md.digest(password.getBytes(StandardCharsets.UTF_8));

@@ -1,9 +1,11 @@
 package edu.wku.hospital.management.service;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
-
-import edu.wku.hospital.management.frame.Command;
+import java.util.Properties;
+import java.util.Scanner;
 
 /**
  * This class contains the commands that can be executed in the system.
@@ -24,16 +26,41 @@ public class Commands {
 
     
     public static class Initial implements Command, Serializable{
+        private Properties config;
+
+        public Initial() {
+            config = new Properties();
+            try {
+                FileInputStream in = new FileInputStream("  ./temp/config.properties");
+                config.load(in);
+                in.close();
+                System.out.println(config.getProperty("password"));
+            } catch (IOException e) {
+                System.out.println("Error reading config file: " + e.getMessage());
+            }
+    }
+
+
         @Override
         public void execute(List<Serializable> data) {
-            // Define what should be done in the INITIAL state
+            
         }
 
         @Override
-        public void execute() {
-            // TODO Auto-generated method stub
-            throw new UnsupportedOperationException("Unimplemented method 'execute'");
+    public void execute() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter your password:");
+        String inputPassword = scanner.nextLine();
+
+        String correctPassword = config.getProperty("password");
+
+        if (inputPassword.equals(correctPassword)) {
+            System.out.println("Access granted.");
+        } else {
+            System.out.println(config.getProperty("password"));
+            System.out.println("Access denied.");
         }
+    }
     }
 
     public static class Register implements Command, Serializable{
@@ -99,5 +126,22 @@ public class Commands {
             // TODO Auto-generated method stub
             throw new UnsupportedOperationException("Unimplemented method 'execute'");
         }
+    }
+
+    public static class Expire implements Command, Serializable {
+
+        @Override
+        public void execute(List<Serializable> data) {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'execute'");
+        }
+
+        @Override
+        public void execute() {
+            // TODO Auto-generated method stub
+            throw new UnsupportedOperationException("Unimplemented method 'execute'");
+        }
+    
+        
     }
 }
