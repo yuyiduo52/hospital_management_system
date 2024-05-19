@@ -3,7 +3,7 @@ package edu.wku.hospital.management.model;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-
+//预约功能---暂未实现
 /**
  * Appointment
  * @author Yiduo Yu

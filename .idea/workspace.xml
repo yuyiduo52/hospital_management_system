@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3d1a8431-511a-4b49-ab76-94e5f2e55251" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/exception/NotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/exception/NotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/exception/TransactionFailedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/exception/TransactionFailedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/exception/duplicatedException.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/exception/duplicatedException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Appointment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Appointment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Department.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Doctor.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Doctor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Patient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Patient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/model/Schedule.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/service/IOManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hospital/edu/wku/hospital/management/service/IOManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/exception/NotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/exception/NotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/exception/TransactionFailedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/exception/TransactionFailedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/exception/duplicatedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/exception/DuplicatedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/frame/HospitalManagementSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/frame/HospitalManagementSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/frame/StateMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/frame/StateMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Hospital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Hospital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Tradable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/model/Tradable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/service/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/service/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/service/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/service/Commands.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/service/IOManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/wku/hospital/management/service/IOManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/wku/hospital/management/service/Register.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +62,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HospitalManagementSystem.executor": "Run",
     "Application.IOManager.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/albert/Desktop/yuyid/hospital",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,6 +82,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="HospitalManagementSystem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.wku.hospital.management.frame.HospitalManagementSystem" />
+      <module name="hospital" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.wku.hospital.management.frame.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HospitalManagementSystem" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,10 +114,24 @@
       <workItem from="1715827572853" duration="836000" />
       <workItem from="1715829897615" duration="749000" />
       <workItem from="1715910349427" duration="5712000" />
+      <workItem from="1716099128417" duration="147000" />
+      <workItem from="1716099341394" duration="10257000" />
+      <workItem from="1716116697770" duration="4522000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

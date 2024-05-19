@@ -15,6 +15,7 @@ import java.util.Map;
 import edu.wku.hospital.management.service.Command;
 import edu.wku.hospital.management.service.Commands;
 
+//管理状态
 /**
  * 
  * This class is used to manage the state of the system
@@ -36,7 +37,10 @@ public class StateMachine implements Serializable {
         CASE_RECORDING,
         QUIT, 
         EXPIRED
-    }   
+    }
+    public StateMachine(){
+
+    }
 
     public StateMachine(State initialState) {
         this.stateHistory = new ArrayList<>();
@@ -54,7 +58,7 @@ public class StateMachine implements Serializable {
 
     public void manageState(Command command, Serializable data){
         //manage state for some special cases
-        if ( command == null) {
+        if (command == null) {
             return;
         }
         else if (command instanceof Commands.Bill && stateHistory.contains(State.DOCTOR_CHECK) ) {
@@ -96,7 +100,9 @@ public class StateMachine implements Serializable {
         return stateHistory.get(stateHistory.size() - 1);
     }
 
-
+    public Map<State, Command> getCommands(){
+        return commands;
+    }
     public Command getCommand(String state){
         switch (state) {
             case "initial":
@@ -126,6 +132,7 @@ public class StateMachine implements Serializable {
             case "expire":
             case "logout":
                 state = State.EXPIRED.name();
+                break;
             default:
                 state = State.INITIAL.name();
                 break;

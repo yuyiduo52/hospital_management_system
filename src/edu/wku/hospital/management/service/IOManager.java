@@ -12,7 +12,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-
 /**
  * This class is used to manage the input and output of the system
  *@author Yiduo Yu
@@ -20,6 +19,8 @@ import java.io.Serializable;
  *@since 5-17-2024
  *
  */
+
+//保存历史文件，序列化
 public class IOManager {
     //ALERT: IN THIS PROGRAM, HOME_DIRECTORY IS THE DESKTOP
     private final static File HOME_DIRECTORY = new File(System.getProperty("user.home"), "Desktop");
@@ -42,6 +43,14 @@ public class IOManager {
             // User cancelled the file chooser or an error occurred
             return null;
         }
+    }
+
+    public static File getHomeDirectory(){
+        return HOME_DIRECTORY;
+    }
+
+    public static File getWorkingDirectory(){
+        return WORKING_DIRECTORY;
     }
 
     /**
@@ -121,11 +130,11 @@ public class IOManager {
         return o;
         } 
             catch (IOException i) {
-            i.printStackTrace();
+                System.out.println(i.toString());
             return null;
             } 
             catch (ClassNotFoundException c) {
-                c.printStackTrace();
+                System.out.println("class not found exception");
                 return null;
             }
         }

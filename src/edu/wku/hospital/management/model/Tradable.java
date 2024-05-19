@@ -6,7 +6,10 @@ import edu.wku.hospital.management.exception.TransactionFailedException;
  * @version 1.0
  * @date May 17, 2024
  */
+
+//接口：病人医院交易
+
 public interface Tradable {
     public void pay(double amount) throws TransactionFailedException;
-    public void charge(double amount);    
+    public void charge(Tradable o,double amount) throws TransactionFailedException;
 }
