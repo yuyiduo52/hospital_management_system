@@ -1,5 +1,6 @@
 package edu.wku.hospital.management.exception;
 
+//查询文件失败
 public class NotFoundException extends Exception{
     private final String resource;
     private final String filePath;
