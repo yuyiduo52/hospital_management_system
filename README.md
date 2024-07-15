@@ -7,7 +7,7 @@
 1. Write exception classes (due May 17)✅ on May 17
 1. Implement all data classes (due May 17)✅ on May 17
 1. Implement all service classes (due May 18)✅ on May 19
-1. Conduct tests and refine the program (no due date until the project due date)
+1. Conduct tests and refine the program (no due date until the project due date)✅ on May 21
 
 
 
