@@ -1,4 +1,4 @@
-# WKU Affiliated Hospital Management System
+# WKU Hospital Management System(cps2231 final project)
 
 
 ## Schedule
